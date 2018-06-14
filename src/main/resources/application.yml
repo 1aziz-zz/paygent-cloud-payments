@@ -1,0 +1,18 @@
+server:
+  port: 9003
+
+spring:
+# ActiveMQ
+
+  activemq:
+    user: ${ACTIVEMQ_USER}
+    password: ${ACTIVEMQ_PASSWORD}
+    broker-url: ${ACTIVEMQ_URL}
+    packages:
+      trust-all: true
+
+# MongoDB
+
+  data:
+    mongodb:
+      uri: mongodb+srv://${MONGODB_USER}:${MONGODB_PASS}@${MONGODB_HOST}/paymentservice?retryWrites=true
